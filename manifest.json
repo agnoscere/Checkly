@@ -12,7 +12,7 @@
       }
     ],
     "browser_action": {
-      "default_icon": "logo_png",
+      "default_icon": "logo_png.png",
       "default_popup": "popup.html",
       "default_title": "The popup comes here."
     }
