@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', function() {
     };
 
     chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
-        var link = "http://10.22.0.183/hack2020/process.php?url=" + tabs[0].url;
+        var link = "http://10.22.0.213/hack2020/process.php?url=" + tabs[0].url;
 
         xhttp.open("GET", link, true);
         xhttp.send();
