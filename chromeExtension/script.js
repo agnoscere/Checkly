@@ -3,11 +3,16 @@ window.addEventListener('DOMContentLoaded', function() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var input = this.responseText.split(":");
+            input[1] = input[1].substr(0, 1).toUpperCase() + input[1].substr(1);
             var trustLabel = document.getElementById("isTrust");
             trustLabel.innerHTML = input[1];
 
-            if (trustLabel.innerText == "impartial") {
-                trustLabel.color = "green";
+            if (input[1].includes("Impartial") || input[1].includes("Trusted")) {
+                trustLabel.style.color = "green";
+            } else if (input[1].includes("Bias") || input[1].includes("Conspiracy") || input[1].includes("Satire")) {
+                trustLabel.style.color = "red";
+            } else {
+                trustLabel.style.color = "orange";
             }
 
             document.getElementById("demo").innerHTML = input[0] + "%";
