@@ -3,6 +3,11 @@
     "name": "FactChecker",
     "version": "69.69",
 
+    "permissions": [
+        "http://10.22.0.183/hack2020/",
+        "tabs"
+    ],
+
     "browser_action": {
       "default_icon": "logo_png.png",
       "default_popup": "popup.html",

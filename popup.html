@@ -4,23 +4,42 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <h2 id="help">FactChecker</h2>
-        <div class="loader"></div>
+        <div id="loadingPage">
+            <h2 id="help">FactChecker</h2>
+            <div id="loader"></div>
+        </div>
+
+        <div id="resultPage">
+            <h2 id="help">FactChecker</h2>
+            <p id="demo"></p>
+        </div>
     </body>
 
     <style>
-        .loader {
+        #loader {
             border: 16px solid #f3f3f3;
             border-top: 16px solid #9400D3;
             border-radius: 50%;
             width: 35px;
             height: 35px;
             animation: spin 1s linear infinite;
+            text-align: center;
         }
     
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg);}
+        }
+
+        #resultPage {
+            display: none;
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 10s;
+            animation-name: animatebottom;
+            animation-duration: 10s;
+            display: none;
+            text-align: center;
         }
         
     </style>
