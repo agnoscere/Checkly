@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
             if (input[1].includes("Impartial") || input[1].includes("Trusted")) {
                 trustLabel.style.color = "green";
-            } else if (input[1].includes("Bias") || input[1].includes("Conspiracy") || input[1].includes("Satire")) {
+            } else if (input[1].includes("Bias") || input[1].includes("Conspiracy") || input[1].includes("Satire") || input[1].includes("Clickbait")) {
                 trustLabel.style.color = "red";
             } else {
                 trustLabel.style.color = "orange";
